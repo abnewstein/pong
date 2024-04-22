@@ -1,6 +1,6 @@
 use macroquad::prelude::*;
 
-pub const PADDLE_SPEED: f32 = 500.0;
+pub const PADDLE_SPEED: f32 = 600.0;
 
 pub struct Paddle {
     pub rect: Rect,

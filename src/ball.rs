@@ -3,10 +3,10 @@ use macroquad::prelude::*;
 
 use crate::paddle::Paddle;
 
-const BALL_SPEED: f32 = 200.0;
+const BALL_SPEED: f32 = 300.0;
 
 pub struct Ball {
-    circle: Circle,
+    pub circle: Circle,
     velocity: Vec2,
 }
 
