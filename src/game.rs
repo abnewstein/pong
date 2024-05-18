@@ -53,7 +53,7 @@ impl Game {
                 player1.update(dt);
                 player2.update(dt);
                 ball.update(dt);
-                ball.collision_check(&player1, &player2);
+                ball.collision_check(player1, player2);
 
                 if ball.circle.x - ball.circle.r < 0.0 {
                     score.increase_player2_score();
@@ -63,7 +63,7 @@ impl Game {
                     *ball = Ball::new(screen_width() / 2., screen_height() / 2.);
                 }
 
-                if let Some(_) = score.check_winner() {
+                if score.check_winner().is_some() {
                     *state = GameState::GameOver;
                 }
 
